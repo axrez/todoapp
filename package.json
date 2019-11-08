@@ -8,10 +8,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
     "apollo-server-micro": "^2.9.7",
     "graphql": "^14.5.8",
     "mongoose": "^5.7.8",
     "next": "9.1.2",
+    "prop-types": "^15.7.2",
     "react": "16.11.0",
     "react-dom": "16.11.0",
     "styled-components": "^4.4.1"

@@ -1,0 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
+html body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  --red-orange-grad: linear-gradient(250deg, #FFC700 0%, #FF2D00 100%);
+}

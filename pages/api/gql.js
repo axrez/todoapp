@@ -3,11 +3,17 @@ const { ApolloServer, gql } = require('apollo-server-micro')
 const typeDefs = gql`
   type Book {
     title: String
-    author: String
+    author: Author
+  }
+
+  type Author {
+    name: String
+    books: [Book]
   }
 
   type Query {
-    books: [Book]
+    getBooks: [Book]
+    getAuthors: [Author]
   }
 `
 
@@ -22,9 +28,19 @@ const books = [
   },
 ]
 
+const authors = [
+  {
+    name: 'J.K. Rowling',
+  },
+  {
+    name: 'Michael Crichton',
+  },
+]
+
 const resolvers = {
   Query: {
-    books: () => books,
+    getBooks: () => books,
+    getAuthors: () => authors,
   },
 }
 
